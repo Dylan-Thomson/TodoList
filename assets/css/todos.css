@@ -1,5 +1,10 @@
 body {
 	font-family: Roboto;
+
+	background: #D38312;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 h1 {
@@ -14,11 +19,16 @@ h1 {
 	font-weight: normal;
 }
 
+.fa-pencil-square-o {
+	float: right;
+}
+
 input {
 	font-size: 18px;
 	background: #f7f7f7;
 	width: 100%;
 	padding: 13px 13px 13px 20px;
+	border: 3px solid rgba(0, 0, 0, 0);
 
 	box-sizing: border-box;
 	/*prefixes for box sizing needed*/
@@ -48,6 +58,24 @@ li {
 
 li:nth-child(2n) {
 	background: #f7f7f7;
+}
+
+span {
+	background: #e74c3c;
+	color: #fff;
+
+	height: 40px;
+	width: 0px;
+	display: inline-block;
+	margin-right: 20px;
+	text-align: center;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+li:hover span {
+	width: 40px;
+	opacity: 1.0;
 }
 
 #container {
